@@ -63,8 +63,31 @@ console.log(contactInfo);
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
-const uni = [];
-console.log(uni);
+
+
+// let uni = graduates.filter(function(uni){
+//   uni.includes("Uni")
+// })
+
+numbers = [1,2,3,4]
+
+
+
+       //[2]
+const number = numbers.filter(number =>{
+  if(number === 2){
+    return true
+  }else{
+    return false
+  }
+
+} );
+console.log(number);
+console.log(numbers);
+
+
+
+
 
 
 // ==== ADVANCED Array Methods ====
@@ -89,6 +112,9 @@ The zoo wants to display both the scientific name and the animal name in front o
 
 */
 const animalNames = [];
+zooAnimals.forEach((animal)=>{
+  animalNames.push(`${animal.animal_name} ${animal.scientific_name}`)
+})
 console.log(animalNames);
 
 /* Request 2: .map()    
@@ -99,13 +125,19 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 
 const lowerCase = [];
 console.log(lowerCase); 
+zooAnimals.map((animal)=>{
+   lowerCase.push(animal.animal_name.toLowerCase())
+})
 
+console.log(lowerCase)
 /* Request 3: .filter() 
 
 The zoos are concenred about animals with a lower population count. Find out which animals have a population less than 5.
 
 */
 const lowerPopulation = [];
+
+
 console.log(lowerPopulation);
 
 /* Request 4: .reduce() 
